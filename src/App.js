@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+//  BrowserRouter as Router,
   HashRouter,
-  MemoryRouter,
-  StaticRouter,
+  //MemoryRouter,
+  //StaticRouter,
   Route,
   Link,
-  Switch,
-  Redirect,
-  Prompt,
-  BrowserRouter
+//  Switch,
+//  Redirect,
+//  Prompt,
+//  BrowserRouter
 } from 'react-router-dom';
 
 import './App.css'
@@ -322,15 +322,16 @@ const LinksRoutes = () => (
   </div>
 )
 
-const forceRefresh = () => {
+/*const forceRefresh = () => {
   console.log(new Date())
   return false
-}
-const BrowserRouterApp = () => (
+}*/
+
+/*const BrowserRouterApp = () => (
   <BrowserRouter forceRefresh={forceRefresh()}>
     <LinksRoutes />
   </BrowserRouter>
-)
+)*/
 
 const HasRouterApp = () => (
   <HashRouter hashType="noslash">
@@ -338,20 +339,20 @@ const HasRouterApp = () => (
   </HashRouter>
 )
 
-const MemoryRouterApp = () => (
+/*const MemoryRouterApp = () => (
   <MemoryRouter
   initialEntries={['/', '/about']}
   initialIndex={0}>
     <LinksRoutes />
   </MemoryRouter>
-)
+)*/
 
-const StaticRouterApp = () => (
+/*const StaticRouterApp = () => (
   <StaticRouter
   location="/about"
   context={{}} >
     <LinksRoutes />
   </StaticRouter>
-)
+)*/
 
 export default HasRouterApp
